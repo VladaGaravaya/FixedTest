@@ -5,7 +5,7 @@ import { Component }  from '@angular/core';
     template: `<textarea [(ngModel)]="data"></textarea>
     <br>
     <button class="btn btn-default" (click)="loading(data)">Продолжить</button>
-    <div class="panel">
+    <div class="panel" [style.visibility]="items ? 'visible' : 'hidden'">
         <div class="form-inline">
             <div class="form-group">
                 <button class="btn btn-default" (click)="addItem(text, year)">Добавить запись</button>
